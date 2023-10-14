@@ -1,0 +1,17 @@
+Carrot
+Broccoli
+Cauliflower
+Tomato
+Cucumber
+Spinach
+Lettuce
+Potato
+Onion
+Garlic
+Peas
+Beans
+Asparagus
+Zucchini
+Eggplant
+Celery
+Radish

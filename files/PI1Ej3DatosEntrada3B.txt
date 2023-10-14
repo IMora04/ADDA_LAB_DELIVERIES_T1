@@ -1,0 +1,18 @@
+Doctor
+Teacher
+Engineer
+Lawyer
+Nurse
+Scientist
+Artist
+Chef
+Firefighter
+Police officer
+Dentist
+Architect
+Musician
+Actor
+Accountant
+Electrician
+Writer
+Farmer
