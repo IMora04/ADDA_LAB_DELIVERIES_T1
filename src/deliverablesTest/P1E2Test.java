@@ -6,12 +6,12 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
-import deliverables.P1E1;
+import deliverables.P1E2;
 
-public class P1E1Test {
+public class P1E2Test {
 	
-	public static void Test1() {
-		String file = "files/PI1Ej1DatosEntrada.txt";
+	public static void Test2() {
+		String file = "files/PI1Ej2DatosEntrada.txt";
 		List<String> values = new ArrayList<>();
 		try {
 			values = Files.lines(Path.of(file)).toList();
@@ -23,17 +23,22 @@ public class P1E1Test {
 			Integer v1 = Integer.valueOf(s.split(",")[0]);
 			Integer v2 = Integer.valueOf(s.split(",")[1]);
 			System.out.println("-----------------------");
-			System.out.println("Given solution:");
-			System.out.println(P1E1.exercise1(v1, v2));
-			System.out.println("Iterative solution:");
-			System.out.println(P1E1.iterativeSol(v1, v2));
+			System.out.println("Non-final recursive solution:");
+			System.out.println(P1E2.f_non_final(v1, v2));
+			System.out.println("Iterative with while solution:");
+			System.out.println(P1E2.f_iterative(v1, v2));
 			System.out.println("Final recursive solution:");
-			System.out.println(P1E1.finalRecursiveSol(v1, v2));
+			System.out.println(P1E2.f_final(v1, v2));
+			System.out.println("Functional solution:");
+			System.out.println(P1E2.f_functional(v1, v2));
+
+
 		}
 	}
 	
 	public static void main(String[] args) {
-		Test1();
+		Test2();
 	}
+
 
 }

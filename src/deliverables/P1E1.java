@@ -6,16 +6,16 @@ import java.util.stream.Stream;
 
 public class P1E1 {
 	
-	public record EnteroCadena(Integer a, String s) {
+	public record EnteroCadena(Integer a, String s) {	//Define record used in the ex.
 		public static EnteroCadena of(Integer a, String s) {
 			return new EnteroCadena(a, s);
 		}
 	}
 	
-	public static String ejercicio1 (Integer varA, Integer varB) {
+	public static String exercise1 (Integer varA, Integer varB) {	//Given ex.
 		UnaryOperator<EnteroCadena> nx = elem ->
 		{
-		return EnteroCadena.of(elem.a()+3,
+		return EnteroCadena.of(elem.a()+3,	//Each "a" contains string with previous a + "*"/"!"
 		elem.a()%2==0?
 		elem.a()+"*":
 		elem.a()+"!");
@@ -28,38 +28,31 @@ public class P1E1 {
 		}
 	
 	public static String iterativeSol(Integer varA, Integer varB) {
-		String res = "";
-		Integer a = varA;
-		String b = "A";
+		String res = "";				//Accumulator
+		Integer a = varA;				//Sequence
+		String b = "A";					//f(a) to be accumulated
 		while(a < varB) {
 			if(a%10 != 0) {
-				res = res + "-" + b;
+				res = res + "-" + b;	//If the actual value is not divisible, accumulate previous b
 			}
 			if(a%2 == 0) {
-				b = a + "*";
+				b = a + "*";			//We accumulate the previous value of a + "*"/"!"
 			} else {
 				b = a + "!";
 			}
-			a = a + 3;
+			a = a + 3;					//Update sequence
 		}
-		return res.substring(1);
-		//while ECa < varb
-		//if a%10 != 0
-			//a = a+3
-			//if a%2 == 0
-				//s = a + *
-			//else
-				//s = a + !
+		return res.substring(1);		//Remove first "-"
 	}
 	
-	public static String finalRecursiveSol(Integer varA, Integer varB) {
+	public static String finalRecursiveSol(Integer varA, Integer varB) {	//First call of the recursive solution
 		String res = "";
 		String b = "A";
 		return finalRecursiveSolAux(varA, varB, res, b);
 	}
 	
 	public static String finalRecursiveSolAux(Integer a, Integer varB, String res, String b) {
-		if(a < varB) {
+		if(a < varB) {										//Same conditions as iterative solution
 			if(a%10 != 0) {
 				res = res + "-" + b;
 			}
@@ -69,7 +62,7 @@ public class P1E1 {
 				b = a + "!";
 			}
 			a = a + 3;
-			res = finalRecursiveSolAux(a, varB, res, b);
+			res = finalRecursiveSolAux(a, varB, res, b);	//Recursive call with updated values
 		} else {
 			res = res.substring(1);
 		}
