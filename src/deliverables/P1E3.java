@@ -20,7 +20,7 @@ public class P1E3 {
 			boolean isFirst = true;
 			
 			while (iterator1.hasNext() && iterator2.hasNext()) {	//If both of them have next, iterate
-				if (isFirst) {
+				if (isFirst) {	//IsFirst is true during 2 iterations
 					res.add(iterator1.next());
 				} else {
 					res.add(iterator2.next());
