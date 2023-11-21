@@ -1,0 +1,6 @@
+A(B,C,D)
+A(B(E,F),C,D(G,H,I))
+A(B(E(/_,J),F),C,D(G,H,I))
+A(B(E(/_,J),F),C,D(G,H(K,L),I))
+A(B(E(/_,J),F),C(M,/_),D(G,H(K,L),I))
+A(B(E(/_,J),F),C(M,/_),D(G,H(K,L(O,O)),I))

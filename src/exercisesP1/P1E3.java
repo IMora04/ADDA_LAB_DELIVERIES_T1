@@ -1,4 +1,4 @@
-package deliverables;
+package exercisesP1;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Stream;
 
-import auxTypes.AuxTypes.IteratorPair;
+import auxTypesP1.AuxTypes.IteratorPair;
 
 public class P1E3 {
 

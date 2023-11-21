@@ -1,4 +1,4 @@
-package auxTypes;
+package auxTypesP1;
 
 import java.util.Iterator;
 

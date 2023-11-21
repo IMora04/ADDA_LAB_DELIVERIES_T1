@@ -1,4 +1,4 @@
-package deliverablesTest;
+package exercisesTestsP1;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -6,12 +6,13 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
-import deliverables.P1E4;
+import exercisesP1.P1E2;
 
-public class P1E4Test {
+public class P1E2Test {
 
-	public static void Test4(String filePath) {
+	public static void Test2(String filePath) {
 		List<String> values = new ArrayList<>();
+		
 		try {
 			values = Files.lines(Path.of(filePath)).toList();
 		} catch (IOException e) {
@@ -23,20 +24,23 @@ public class P1E4Test {
 			Integer v2 = Integer.valueOf(s.split(",")[1]);
 			System.out.println("---------------- TEST FOR FILE " + filePath + ". Values: [" + v1 + ", " + v2 + "] ----------------");
 			System.out.println();
-			System.out.println("Recursive without memory:");
-			System.out.println(P1E4.g_rec_no_mem(v1, v2));
+			System.out.println("Non-final recursive solution:");
+			System.out.println(P1E2.f_non_final(v1, v2));
 			System.out.println();
-			System.out.println("Recursive with memory:");
-			System.out.println(P1E4.g_rec_mem(v1, v2));
+			System.out.println("Iterative with while solution:");
+			System.out.println(P1E2.f_iterative(v1, v2));
 			System.out.println();
-			System.out.println("Iterative (with mem):");
-			System.out.println(P1E4.g_iterative(v1, v2));
+			System.out.println("Final recursive solution:");
+			System.out.println(P1E2.f_final(v1, v2));
+			System.out.println();
+			System.out.println("Functional solution:");
+			System.out.println(P1E2.f_functional(v1, v2));
 			System.out.println();
 		}
 	}
 
 	public static void main(String[] args) {
-		Test4("files/PI1Ej4DatosEntrada.txt");
+		Test2("files/PI1Ej2DatosEntrada.txt");
 	}
 
 }

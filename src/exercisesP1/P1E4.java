@@ -1,9 +1,9 @@
-package deliverables;
+package exercisesP1;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import auxTypes.AuxTypes.Pair;
+import auxTypesP1.AuxTypes.Pair;
 
 public class P1E4 {
 

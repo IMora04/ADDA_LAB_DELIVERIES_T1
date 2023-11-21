@@ -1,6 +1,6 @@
-package deliverablesTest;
+package exercisesTestsP1;
 
-import deliverables.P1E3;
+import exercisesP1.P1E3;
 
 public class P1E3Test {
 	

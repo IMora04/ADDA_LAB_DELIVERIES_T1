@@ -1,10 +1,10 @@
-package deliverables;
+package exercisesP1;
 
 import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import auxTypes.AuxTypes.EnteroCadena;
+import auxTypesP1.AuxTypes.EnteroCadena;
 
 public class P1E1 {
 
