@@ -113,7 +113,7 @@ public class Exercise1Test {
 	
 	public static void showCombined() {
 		MatPlotLib.showCombined("Tiempos",
-				List.of("ficheros_generados/double_it.txt","ficheros_generados/double_rec.txt","ficheros_generados/bigInt_it.txt", "ficheros_generados/bigInt_rec.txt"), 
+				List.of("generated_files/double_it.txt","generated_files/double_rec.txt","generated_files/bigInt_it.txt", "generated_files/bigInt_rec.txt"), 
 				List.of("double_it","double_rec","bigInt_it", "bigInt_rec"));
 		//List.of("ficheros_generados/double_it.txt","ficheros_generados/double_rec.txt"), 
 		//List.of("double_it","double_rec"));

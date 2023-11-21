@@ -57,16 +57,14 @@ public class Exercise2Test {
 	
 	public static void showCombined() {	
 		MatPlotLib.showCombined("Tiempos",
-				//List.of("ficheros_generados/umbral1_.txt","ficheros_generados/umbral4_.txt","ficheros_generados/umbral16_.txt", "ficheros_generados/umbral64_.txt", "ficheros_generados/umbral256_.txt"), 
-				//DONE WITH _ TXTS
-				List.of("ficheros_generados/umbral1.txt","ficheros_generados/umbral4.txt","ficheros_generados/umbral16.txt", "ficheros_generados/umbral64.txt", "ficheros_generados/umbral256.txt"), 
+				List.of("generated_files/umbral1.txt","generated_files/umbral4.txt","generated_files/umbral16.txt", "generated_files/umbral64.txt", "generated_files/umbral256.txt"), 
 				List.of("Umbral 1","Umbral 4","Umbral 16", "Umbral 64", "Umbral 256"));
 	}
 
 	
 	public static void main(String[] args) {
-		genData();
-		showData();
+		//genData();
+		//showData();
 		showCombined();
 	}
 
