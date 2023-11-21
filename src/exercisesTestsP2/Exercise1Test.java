@@ -20,8 +20,8 @@ public class Exercise1Test {
 	private static Integer nMin = 100; // n mínimo para el cálculo de potencia
 	private static Integer nMax = 10000; // n máximo para el cálculo de potencia
 //	private static Integer nIncr = 5100; // incremento en los valores de n del cálculo de potencia
-	private static Integer nIncr = (nMax-nMin)/10; // incremento en los valores de n del cálculo de potencia
-	private static Integer nIter = 5; // número de iteraciones para cada medición de tiempo
+	private static Integer nIncr = (nMax-nMin)/15; // incremento en los valores de n del cálculo de potencia
+	private static Integer nIter = 15; // número de iteraciones para cada medición de tiempo
 //	private static Integer nIterWarmup = 100; // número de iteraciones para warmup
 	private static Integer nIterWarmup = 1000; // número de iteraciones para warmup
 	
@@ -123,13 +123,13 @@ public class Exercise1Test {
 	public static void main(String[] args) {
 		//genDataDoubleIt();
 		//genDataDoubleRec();
-//		genDataBigIntIt();
-//		genDataBigIntRec();
+		//genDataBigIntIt();
+		//genDataBigIntRec();
 
-//		showDoubleIt();
-//		showDoubleRec();
-//		showBigIntIt();
-//		showBigIntRec();
+		//showDoubleIt();
+		//showDoubleRec();
+		//showBigIntIt();
+		//showBigIntRec();
 				
 		showCombined();
 	}
