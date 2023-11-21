@@ -11,17 +11,7 @@ import us.lsi.tiposrecursivos.BinaryTree.BTree;
 
 public class Exercise4 {
 	
-	/*
-	 * 4. Dado un árbol binario de enteros, diseñe un algoritmo que devuelva una lista de
-caminos con aquellos caminos desde el nodo raíz hasta una hoja que cumplan que: la
-suma de las etiquetas de los nodos del camino sea divisible entre la longitud de dicho
-camino. Se considera que un camino se modela como una lista que incluye los enteros de
-las etiquetas que componen el camino por orden (de la raíz a la hoja). Proporcione una
-solución también para árboles n-arios.
-	 */
-	
 	public static List<List<Integer>> pathList(BinaryTree<Integer> tree) {
-		// sum of labels is divisible by length of path
 		List<List<Integer>> ls = new ArrayList<>();
 		pathList(tree, ls, List2.empty());
 		return ls;
@@ -62,6 +52,7 @@ solución también para árboles n-arios.
 	}
 	
 	public static void main(String[] args) {
+		
 	}
 
 }
