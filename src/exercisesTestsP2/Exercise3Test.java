@@ -13,7 +13,7 @@ public class Exercise3Test {
 	public static void testBin() {
 		List<String> values = new ArrayList<String>();
 		try {
-			values = Files.lines(Path.of("testEjercicios/PI2Ej3DatosEntradaBinary.txt")).toList();
+			values = Files.lines(Path.of("files/PI2Ej3DatosEntradaBinary.txt")).toList();
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
@@ -27,7 +27,7 @@ public class Exercise3Test {
 	public static void testBin2() {
 		List<String> values = new ArrayList<String>();
 		try {
-			values = Files.lines(Path.of("testEjercicios/PI2Ej3DatosEntradaBinary.txt")).toList();
+			values = Files.lines(Path.of("files/PI2Ej3DatosEntradaBinary.txt")).toList();
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
