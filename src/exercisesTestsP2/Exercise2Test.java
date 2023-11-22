@@ -19,13 +19,10 @@ public class Exercise2Test {
 	
 	private static Integer nMin = 1; // n mínimo para el cálculo de potencia
 	private static Integer nMax = 50000; // n máximo para el cálculo de potencia
-//	private static Integer nIncr = 5100; // incremento en los valores de n del cálculo de potencia
 	private static Integer nIncr = 2; // incremento en los valores de n del cálculo de potencia
 	private static Integer nIter = 50; // número de iteraciones para cada medición de tiempo
-//	private static Integer nIterWarmup = 100; // número de iteraciones para warmup
 	private static Integer nIterWarmup = 5000; // número de iteraciones para warmup
 
-	
 	public static void genData() {
 		List<Double> ls = List2.empty();
 		for(int i = 0; i<nMax; i++){
@@ -36,7 +33,6 @@ public class Exercise2Test {
 			int v = u;
 			String file = "ficheros_generados/umbral" + v + ".txt";
 			Function<Integer,Long> f1 = GenData.time(t -> exercisesP2.Exercise2.mergeSort(List2.ofCollection(ls.subList(0, t)), v));
-//			Integer tMin,Integer tMax,Integer tInc,Integer numIter,Integer numIterWarmup
 			GenData.tiemposEjecucionGeometrica(f1, file, nMin, nMax, nIncr, nIter, nIterWarmup);
 		}
 		
@@ -61,11 +57,10 @@ public class Exercise2Test {
 				List.of("Umbral 1","Umbral 4","Umbral 16", "Umbral 64", "Umbral 256"));
 	}
 
-
 	public static void main(String[] args) {
 		//genData();
-		//showData();
+		showData();
 		showCombined();
 	}
-
+	
 }

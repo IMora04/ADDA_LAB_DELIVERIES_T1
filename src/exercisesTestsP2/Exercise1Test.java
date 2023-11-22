@@ -1,6 +1,5 @@
 package exercisesTestsP2;
 
-
 import java.util.List;
 import java.util.function.Function;
 
@@ -25,32 +24,27 @@ public class Exercise1Test {
 	public static void genDataDoubleIt() {
 		String file = "ficheros_generados/double_it.txt";
 		Function<Integer,Long> f1 = GenData.time(t -> exercisesP2.Exercise1.exercise1_double_it(t, 3));
-//		Integer tMin,Integer tMax,Integer tInc,Integer numIter,Integer numIterWarmup
 		GenData.tiemposEjecucionAritmetica(f1,file,nMin,nMax,nIncr,nIter,nIterWarmup);
 	}
 	
 	public static void genDataDoubleRec() {
 		String file = "ficheros_generados/double_rec.txt";
 		Function<Integer,Long> f1 = GenData.time(t -> exercisesP2.Exercise1.exercise1_double_rec(t, 3));
-//		Integer tMin,Integer tMax,Integer tInc,Integer numIter,Integer numIterWarmup
 		GenData.tiemposEjecucionAritmetica(f1,file,nMin,nMax,nIncr,nIter,nIterWarmup);
 	}
 	
 	public static void genDataBigIntIt() {
 		String file = "ficheros_generados/bigInt_it.txt";
 		Function<Integer,Long> f1 = GenData.time(t -> exercisesP2.Exercise1.exercise1_bigInt_it(t, 3));
-//		Integer tMin,Integer tMax,Integer tInc,Integer numIter,Integer numIterWarmup
 		GenData.tiemposEjecucionAritmetica(f1,file,nMin,nMax,nIncr,nIter,nIterWarmup);
 	}
 	
 	public static void genDataBigIntRec() {
 		String file = "ficheros_generados/bigInt_rec.txt";
 		Function<Integer,Long> f1 = GenData.time(t -> exercisesP2.Exercise1.exercise1_bigInt_rec(t, 3));
-//		Integer tMin,Integer tMax,Integer tInc,Integer numIter,Integer numIterWarmup
 		GenData.tiemposEjecucionAritmetica(f1,file,nMin,nMax,nIncr,nIter,nIterWarmup);
 	}
 
-	
 	
 	public static void showDoubleIt() {
 		String file = "generated_files/double_it.txt";
@@ -115,13 +109,12 @@ public class Exercise1Test {
 //		genDataBigIntIt();
 //		genDataBigIntRec();
 
-//		showDoubleIt();
-//		showDoubleRec();
-//		showBigIntIt();
-//		showBigIntRec();
+		showDoubleIt();
+		showDoubleRec();
+		showBigIntIt();
+		showBigIntRec();
 				
 		showCombinedAll();
 		showCombinedDouble();
 	}
-
 }
