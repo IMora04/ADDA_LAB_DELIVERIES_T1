@@ -18,9 +18,9 @@ import us.lsi.math.Math2;
 public class Exercise2Test {
 	
 	private static Integer nMin = 1; // n mínimo para el cálculo de potencia
-	private static Integer nMax = 25000; // n máximo para el cálculo de potencia
+	private static Integer nMax = 50000; // n máximo para el cálculo de potencia
 //	private static Integer nIncr = 5100; // incremento en los valores de n del cálculo de potencia
-	private static Integer nIncr = (int) Math.pow(nMax, 1/30); // incremento en los valores de n del cálculo de potencia
+	private static Integer nIncr = 2; // incremento en los valores de n del cálculo de potencia
 	private static Integer nIter = 50; // número de iteraciones para cada medición de tiempo
 //	private static Integer nIterWarmup = 100; // número de iteraciones para warmup
 	private static Integer nIterWarmup = 5000; // número de iteraciones para warmup
@@ -45,7 +45,7 @@ public class Exercise2Test {
 	public static void showData() {
 		for(int u = 1; u <= 256; u = u * 4) {
 			int v = u;
-			String file = "ficheros_generados/umbral" + v + ".txt";
+			String file = "generated_files/umbral" + v + ".txt";
 			List<WeightedObservedPoint> data = DataFile.points(file);
 			Fit pl = Polynomial.of(2);
 			pl.fit(data);
@@ -57,13 +57,13 @@ public class Exercise2Test {
 	
 	public static void showCombined() {	
 		MatPlotLib.showCombined("Tiempos",
-				List.of("ficheros_generados/umbral1.txt","ficheros_generados/umbral4.txt","ficheros_generados/umbral16.txt", "ficheros_generados/umbral64.txt", "ficheros_generados/umbral256.txt"), 
+				List.of("generated_files/umbral1.txt","generated_files/umbral4.txt","generated_files/umbral16.txt", "generated_files/umbral64.txt", "generated_files/umbral256.txt"), 
 				List.of("Umbral 1","Umbral 4","Umbral 16", "Umbral 64", "Umbral 256"));
 	}
 
-	
+
 	public static void main(String[] args) {
-		genData();
+		//genData();
 		//showData();
 		showCombined();
 	}

@@ -16,7 +16,6 @@ import us.lsi.tiposrecursivos.Tree.TNary;
 
 public class Exercise3 {
 	
-	
 	public static Boolean isBalanced(BinaryTree<Character> tree) {
 		return isBalancedAux(tree, 0).first();
 	}
