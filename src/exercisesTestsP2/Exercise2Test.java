@@ -17,13 +17,13 @@ import us.lsi.math.Math2;
 
 public class Exercise2Test {
 	
-	private static Integer nMin = 0; // n mínimo para el cálculo de potencia
+	private static Integer nMin = 1; // n mínimo para el cálculo de potencia
 	private static Integer nMax = 25000; // n máximo para el cálculo de potencia
 //	private static Integer nIncr = 5100; // incremento en los valores de n del cálculo de potencia
-	private static Integer nIncr = nMax/30; // incremento en los valores de n del cálculo de potencia
+	private static Integer nIncr = (int) Math.pow(nMax, 1/30); // incremento en los valores de n del cálculo de potencia
 	private static Integer nIter = 50; // número de iteraciones para cada medición de tiempo
 //	private static Integer nIterWarmup = 100; // número de iteraciones para warmup
-	private static Integer nIterWarmup = 2500; // número de iteraciones para warmup
+	private static Integer nIterWarmup = 5000; // número de iteraciones para warmup
 
 	
 	public static void genData() {
@@ -37,7 +37,7 @@ public class Exercise2Test {
 			String file = "ficheros_generados/umbral" + v + ".txt";
 			Function<Integer,Long> f1 = GenData.time(t -> exercisesP2.Exercise2.mergeSort(List2.ofCollection(ls.subList(0, t)), v));
 //			Integer tMin,Integer tMax,Integer tInc,Integer numIter,Integer numIterWarmup
-			GenData.tiemposEjecucionAritmetica(f1,file,nMin,nMax,nIncr,nIter,nIterWarmup);
+			GenData.tiemposEjecucionGeometrica(f1, file, nMin, nMax, nIncr, nIter, nIterWarmup);
 		}
 		
 	}
@@ -47,7 +47,7 @@ public class Exercise2Test {
 			int v = u;
 			String file = "ficheros_generados/umbral" + v + ".txt";
 			List<WeightedObservedPoint> data = DataFile.points(file);
-			Fit pl = PowerLog.of(List.of(Pair.of(2, 0.),Pair.of(3, 0.))); //
+			Fit pl = Polynomial.of(2);
 			pl.fit(data);
 			System.out.println(pl.getExpression());
 			System.out.println(pl.getEvaluation().getRMS());
