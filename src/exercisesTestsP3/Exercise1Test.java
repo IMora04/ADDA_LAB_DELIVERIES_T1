@@ -11,8 +11,8 @@ import org.jgrapht.nio.DefaultAttribute;
 
 import exercisesP3.Utils;
 import exercisesP3.Exercise1;
-import exercisesP3.Exercise1.User;
-import exercisesP3.Exercise1.UserRelation;
+import auxTypesP3.User;
+import auxTypesP3.UserRelation;
 import us.lsi.colors.GraphColors;
 import us.lsi.colors.GraphColors.Color;
 
@@ -68,7 +68,7 @@ public class Exercise1Test {
 				);
 		
 		System.out.println("File " + route + " has been generated\n");
-		
+
 	}
 	
 	public static void testE1d(Graph<User, UserRelation> g, String route) {
@@ -98,6 +98,5 @@ public class Exercise1Test {
 		testE1d(g, "ejercicio1_1_1d");
 		
 	}
-
 	
 }

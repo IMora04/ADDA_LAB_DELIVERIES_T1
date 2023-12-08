@@ -2,10 +2,8 @@ package exercisesP3;
 
 import org.jgrapht.Graph;
 
-import exercisesP3.Exercise1.User;
-import exercisesP3.Exercise1.UserRelation;
-import us.lsi.grafos.datos.Carretera;
-import us.lsi.grafos.datos.Ciudad;
+import auxTypesP3.User;
+import auxTypesP3.UserRelation;
 import us.lsi.graphs.Graphs2;
 import us.lsi.graphs.GraphsReader;
 
@@ -22,6 +20,5 @@ public class Utils {
 				);		
 		
 	}
-
 
 }
