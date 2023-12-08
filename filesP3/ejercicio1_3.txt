@@ -1,0 +1,50 @@
+#VERTEX#
+Diana, 4.8, [Fotografia;Cocina;Docencia;Jardineria;Lectura]
+Guti, 4.5, [Ciclismo;Lectura;Programacion;Conciertos;Ajedrez]
+David, 4.2, [Programacion;Docencia;Ilusionismo;Cine;Escritura]
+Miguel, 4.4, [Conciertos;Ajedrez;Jardineria;Videojuegos;Baile]
+Belen, 4.6, [Ilusionismo;Cine;Fotografia;Cocina;Ciclismo]
+Rafael, 4.7, [Jardineria;Videojuegos;Programacion;Conciertos;Lectura]
+Paco, 4.3, [Docencia;Videojuegos;Cocina;Fotografia;Lectura]
+Elena, 4.1, [Escritura;Baile;Docencia;Ilusionismo;Cine]
+Fernando, 4.2, [Lectura;Docencia;Cocina;Jardineria;Programacion]
+Irene, 4.1, [Cine;Programacion;Conciertos;Ajedrez;Ilusionismo]
+Antonio, 4.3, [Videojuegos;Baile;Fotografia;Ciclismo;Escritura]
+Maria, 4.4, [Cine;Ilusionismo;Docencia;Lectura;Cocina]
+Carlos, 4.1, [Musica;Fotografia;Viajes;Gastronomia;Teatro]
+Daniel, 4.6, [Yoga;Lectura;Pintura;Escalada;Cine]
+Javier, 4.2, [Golf;Programacion;Ciclismo;Ajedrez;Fotografia]
+Maria del Mar, 4.7, [Teatro;Baile;Escritura;Cocina;Jardineria]
+Carmelo, 4.5, [Videojuegos;Musica;Cine;Lectura;Escalada]
+#EDGE#
+Diana, Guti, 3.9
+Diana, Daniel, 3.7
+Diana, Javier, 4.1
+Diana, Maria del Mar, 4.2
+Guti, Maria, 4.0
+Guti, David, 4.1
+Guti, Miguel, 3.6
+Guti, Irene, 3.8
+Daniel, Elena, 3.5
+Daniel, Irene, 4.3
+Daniel, Carlos, 3.6
+Daniel, Carmelo, 3.7
+Maria del Mar, Guti, 4.2
+Maria del Mar, David, 4.1
+Maria del Mar, Rafael, 4.0
+Maria del Mar, Antonio, 4.3
+Irene, Daniel, 4.1
+Irene, Carlos, 3.9
+Irene, Carmelo, 4.0
+Irene, Paco, 3.8
+Javier, Miguel, 4.0
+Miguel, Maria del Mar, 4.0
+Carlos, Elena, 3.8
+Carmelo, Elena, 3.9
+Belen, Maria del Mar, 3.9
+Antonio, Carmelo, 4.2
+Elena, Daniel, 4.3
+Paco, Carmelo, 4.5
+Maria, Carlos, 4.1
+Elena, Carmelo, 3.4
+

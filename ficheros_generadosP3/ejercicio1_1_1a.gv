@@ -1,0 +1,5 @@
+strict digraph G {
+  1 [ label="Guti" ];
+  2 [ label="Belen" ];
+  1 -> 2 [ label="4.0" ];
+}

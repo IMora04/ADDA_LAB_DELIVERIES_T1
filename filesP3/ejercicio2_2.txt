@@ -1,0 +1,31 @@
+#VERTEX#
+Barco Pirata, 30, 8.5, 5
+Casa del Terror, 20, 7.0, 10
+Tombola, 15, 6.5, 15
+Gusano Loco, 10, 5.0, 3
+Raton Vacilon, 25, 7.5, 7
+Coches de choque, 10, 9.5, 7
+Pim pam pum, 15, 6.0, 4
+Puesto de algodon, 5, 7.5, 2
+Noria, 20, 8.0, 5
+Patitos, 10, 5.5, 3
+#EDGE#
+Barco Pirata, Casa del Terror, 150, 2.0
+Barco Pirata, Tombola, 100, 1.5
+Barco Pirata, Raton Vacilon, 150, 1.5
+Casa del Terror, Raton Vacilon, 50, 5
+Tombola, Gusano Loco, 30, 0.5
+Gusano Loco, Raton Vacilon, 40, 0.8
+Coches de choque, Casa del Terror, 150, 2.0
+Coches de choque,Barco Pirata, 100, 2.0
+Casa del Terror,Gusano Loco, 50, 3.0
+Barco Pirata, Pim pam pum, 120, 1.8
+Casa del Terror, Puesto de algodon, 80, 1.2
+Tombola, Noria, 90, 1.4
+Gusano Loco, Patitos, 60, 1.0
+Raton Vacilon, Pim pam pum, 130, 1.9
+Coches de choque, Noria, 110, 2.1
+Pim pam pum, Puesto de algodon, 40, 0.7
+Puesto de algodon, Noria, 50, 0.8
+Noria, Patitos, 70, 1.1
+Patitos, Barco Pirata, 150, 2.0

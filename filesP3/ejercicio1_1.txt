@@ -1,0 +1,43 @@
+#VERTEX#
+Diana, 4.6, [Fotografia;Cocina;Docencia;Jardineria;Lectura]
+Guti, 4.2, [Ciclismo;Lectura;Programacion;Conciertos;Ajedrez]
+David, 4.7, [Programacion;Docencia;Ilusionismo;Cine;Escritura]
+Miguel, 4.8, [Conciertos;Ajedrez;Jardineria;Videojuegos;Baile]
+Belen, 4.5, [Ilusionismo;Cine;Fotografia;Cocina;Ciclismo]
+Rafael, 4.3, [Jardineria;Videojuegos;Programacion;Conciertos;Lectura]
+Paco, 4.1, [Docencia;Videojuegos;Cocina;Fotografia;Lectura]
+Elena, 4.9, [Escritura;Baile;Docencia;Ilusionismo;Cine]
+Fernando, 4.1, [Lectura;Docencia;Cocina;Jardineria;Programacion]
+Irene, 4.2, [Cine;Programacion;Conciertos;Ajedrez;Ilusionismo]
+Antonio, 4.4, [Videojuegos;Baile;Fotografia;Ciclismo;Escritura]
+Maria, 4.5, [Cine;Ilusionismo;Docencia;Lectura;Cocina]
+Laura, 4.6, [Fotografía; Música; Programación; Ajedrez; Cocina]
+Carlos, 4.4, [Jardinería; Ciclismo; Lectura; Cine; Programación]
+Sara, 4.5, [Cocina; Baile; Fotografía; Jardinería; Lectura]
+#EDGE#
+Guti, Belen, 4.0
+Diana, David, 3.7
+David, Miguel, 4.2
+Belen, Diana, 3.8
+Diana, Maria, 4.1
+Irene, Belen, 4.3
+Guti, David, 3.8
+Guti, Elena, 2.7
+Guti, Maria, 3.1
+Antonio, Maria, 4.5
+Guti, Fernando, 1.8
+Miguel, Belen, 3.9
+Belen, Paco, 4.0
+Belen, Maria, 3.0
+Rafael, David, 3.6
+Elena, Belen, 4.2
+Belen, David, 3.5
+Irene, Antonio, 4.0
+Paco, Miguel, 5
+Antonio, Belen, 4.3
+Maria, Fernando, 3.8
+Irene, David, 4.1
+Elena, Maria, 3.2
+Laura, Carlos, 4.0
+Carlos, Sara, 3.9
+Sara, Laura, 4.2

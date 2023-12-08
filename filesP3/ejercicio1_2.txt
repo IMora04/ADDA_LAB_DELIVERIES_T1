@@ -1,0 +1,60 @@
+#VERTEX#
+Diana, 4.8, [Fotografia;Cocina;Docencia;Jardineria;Lectura]
+Guti, 4.5, [Ciclismo;Lectura;Programacion;Conciertos;Ajedrez]
+David, 4.2, [Programacion;Docencia;Ilusionismo;Cine;Escritura]
+Miguel, 4.4, [Conciertos;Ajedrez;Jardineria;Videojuegos;Baile]
+Belen, 4.6, [Ilusionismo;Cine;Fotografia;Cocina;Ciclismo]
+Rafael, 4.7, [Jardineria;Videojuegos;Programacion;Conciertos;Lectura]
+Paco, 4.3, [Docencia;Videojuegos;Cocina;Fotografia;Lectura]
+Elena, 4.1, [Escritura;Baile;Docencia;Ilusionismo;Cine]
+Fernando, 4.2, [Lectura;Docencia;Cocina;Jardineria;Programacion]
+Irene, 4.1, [Cine;Programacion;Conciertos;Ajedrez;Ilusionismo]
+Antonio, 4.3, [Videojuegos;Baile;Fotografia;Ciclismo;Escritura]
+Maria, 4.4, [Cine;Ilusionismo;Docencia;Lectura;Cocina]
+Carlos, 4.1, [Musica;Fotografia;Viajes;Gastronomia;Teatro]
+Daniel, 4.6, [Yoga;Lectura;Pintura;Escalada;Cine]
+Javier, 4.2, [Golf;Programacion;Ciclismo;Ajedrez;Fotografia]
+Maria del Mar, 4.7, [Teatro;Baile;Escritura;Cocina;Jardineria]
+Carmelo, 4.5, [Videojuegos;Musica;Cine;Lectura;Escalada]
+Luis, 4.6, [Teatro; Música; Escritura; Yoga; Cocina]
+Ana, 4.5, [Pintura; Lectura; Jardinería; Ciclismo; Escalada]
+Roberto, 4.4, [Ajedrez; Programación; Cine; Viajes; Fotografía]
+Sofía, 4.7, [Baile; Teatro; Lectura; Música; Cocina]
+#EDGE#
+Diana, Guti, 3.9
+Diana, Daniel, 3.7
+Diana, Javier, 4.1
+Diana, Maria del Mar, 4.0
+Daniel, Guti, 4.1
+Daniel, Elena, 3.5
+Daniel, Maria, 4.2
+Daniel, Irene, 4.3
+Javier, Guti, 4.0
+Javier, Elena, 3.9
+Javier, Maria, 4.1
+Javier, Irene, 4.0
+Maria del Mar, Guti, 4.2
+Maria del Mar, Elena, 3.8
+Maria del Mar, David, 4.1
+Maria del Mar, Miguel, 4.3
+Carlos, Elena, 3.8
+Carmelo, Elena, 3.9
+David, Javier, 4.0
+Belen, Maria del Mar, 3.9
+Irene, Daniel, 4.1
+Guti, Maria, 4.0
+Antonio, Carmelo, 4.2
+Guti, Fernando, 3.0
+David, Miguel, 3.9
+Miguel, Maria del Mar, 4.0
+Belen, Paco, 4.1
+Rafael, Javier, 4.1
+Elena, Daniel, 4.3
+Belen, David, 4.2
+Paco, Carmelo, 4.5
+Maria, Carlos, 4.1
+Elena, Carmelo, 3.4
+Luis, Ana, 4.0
+Ana, Roberto, 3.9
+Roberto, Sofía, 4.1
+Sofía, Luis, 4.2

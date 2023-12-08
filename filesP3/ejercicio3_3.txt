@@ -1,0 +1,50 @@
+#VERTEX#
+Tarea1
+Tarea2
+Tarea3
+Tarea4
+Tarea5
+Tarea6
+Tarea7
+Tarea8
+Tarea9
+Tarea10
+Tarea11
+Tarea12
+Tarea13
+Tarea14
+Tarea15
+#EDGE#
+Tarea1, Tarea4
+Tarea1, Tarea5
+Tarea1, Tarea9
+Tarea2, Tarea4
+Tarea2, Tarea6
+Tarea2, Tarea8
+Tarea2, Tarea9
+Tarea3, Tarea4
+Tarea3, Tarea10
+Tarea4, Tarea5
+Tarea4, Tarea6
+Tarea5, Tarea7
+Tarea5, Tarea9
+Tarea6, Tarea7
+Tarea6, Tarea8
+Tarea7, Tarea8
+Tarea7, Tarea9
+Tarea8, Tarea10
+Tarea9, Tarea10
+Tarea1, Tarea11
+Tarea12, Tarea13
+Tarea13, Tarea14
+Tarea14, Tarea15
+Tarea15, Tarea8
+Tarea11, Tarea14
+Tarea12, Tarea5
+Tarea9, Tarea13
+Tarea13, Tarea10
+Tarea14, Tarea10
+Tarea2, Tarea15
+Tarea5, Tarea11
+Tarea3, Tarea12
+Tarea6, Tarea14
