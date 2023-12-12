@@ -1,7 +1,9 @@
 package exercisesTestsP3;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -28,28 +30,28 @@ public class Exercise1Test {
 				);
 	}
 	
+	public static Map<String, Attribute> getColor(User v, List<Set<User>> groups) {
+		Integer index = groups.size();
+		for(int i = 0; i < groups.size(); i++) {
+			if(groups.get(i).contains(v)) {
+				index = i;
+				break;
+			}
+		}
+		return GraphColors.color(index);
+	}
+	
 	public static void testE1b(Graph<User, UserRelation> g, String route) {
 		
-		var groups = Exercise1.userGroups(g).connectedSets();
-		
-		Function<User, Map<String, Attribute>> getColor = v -> {
-			int index = groups.size();
-			for(int i = 0; i < groups.size(); i++) {
-				if(groups.get(i).contains(v)) {
-					index = i;
-					break;
-				}
-			}
-			return Map.of("color", DefaultAttribute.createAttribute(String.valueOf(Arrays.asList(Color.values()).get(index))));
-		};
-		
+		List<Set<User>> groups = Exercise1.userGroups(g).connectedSets();
+				
 		GraphColors.toDot(
 				g,
 				"ficheros_generadosP3/" + route + ".gv",
 				v -> v.userName(),
 				e -> String.valueOf(e.interactionIndex()),
-				getColor, 
-				e -> GraphColors.color(Color.black)
+				v -> getColor(v, groups), 
+				e -> getColor(g.getEdgeSource(e), groups)
 				);
 		
 		System.out.println("File " + route + " has been generated");
