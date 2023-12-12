@@ -1,9 +1,9 @@
-strict digraph G {
+digraph G {
   1 [ label="Diana" ];
   2 [ label="Guti" ];
-  3 [ color="yellow" label="David" ];
+  3 [ color="red" label="David" ];
   4 [ label="Miguel" ];
-  5 [ color="yellow" label="Belen" ];
+  5 [ color="red" label="Belen" ];
   6 [ label="Rafael" ];
   7 [ label="Paco" ];
   8 [ label="Elena" ];

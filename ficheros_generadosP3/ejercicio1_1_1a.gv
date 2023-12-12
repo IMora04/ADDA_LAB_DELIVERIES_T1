@@ -1,5 +1,43 @@
-strict digraph G {
-  1 [ label="Guti" ];
-  2 [ label="Belen" ];
-  1 -> 2 [ label="4.0" ];
+digraph G {
+  1 [ label="Diana" ];
+  2 [ color="red" label="Guti" ];
+  3 [ label="David" ];
+  4 [ label="Miguel" ];
+  5 [ color="red" label="Belen" ];
+  6 [ label="Rafael" ];
+  7 [ label="Paco" ];
+  8 [ label="Elena" ];
+  9 [ label="Fernando" ];
+  10 [ label="Irene" ];
+  11 [ label="Antonio" ];
+  12 [ label="Maria" ];
+  13 [ label="Laura" ];
+  14 [ label="Carlos" ];
+  15 [ label="Sara" ];
+  2 -> 5 [ color="blue" label="4.0" ];
+  1 -> 3 [ label="3.7" ];
+  3 -> 4 [ label="4.2" ];
+  5 -> 1 [ color="blue" label="3.8" ];
+  1 -> 12 [ label="4.1" ];
+  10 -> 5 [ label="4.3" ];
+  2 -> 3 [ color="blue" label="3.8" ];
+  2 -> 8 [ color="blue" label="2.7" ];
+  2 -> 12 [ color="blue" label="3.1" ];
+  11 -> 12 [ label="4.5" ];
+  2 -> 9 [ color="blue" label="1.8" ];
+  4 -> 5 [ label="3.9" ];
+  5 -> 7 [ color="blue" label="4.0" ];
+  5 -> 12 [ color="blue" label="3.0" ];
+  6 -> 3 [ label="3.6" ];
+  8 -> 5 [ label="4.2" ];
+  5 -> 3 [ color="blue" label="3.5" ];
+  10 -> 11 [ label="4.0" ];
+  7 -> 4 [ label="5.0" ];
+  11 -> 5 [ label="4.3" ];
+  12 -> 9 [ label="3.8" ];
+  10 -> 3 [ label="4.1" ];
+  8 -> 12 [ label="3.2" ];
+  13 -> 14 [ label="4.0" ];
+  14 -> 15 [ label="3.9" ];
+  15 -> 13 [ label="4.2" ];
 }

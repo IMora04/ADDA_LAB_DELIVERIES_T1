@@ -35,7 +35,7 @@ public class Exercise1 {
 		return new RecursiveExactVCImpl<>(undirectedG).getVertexCover();
 	}
 
-	public static Graph<User, UserRelation> mostInteraciveUsers(Graph<User, UserRelation> g) {		
+	public static Graph<User, UserRelation> mostInteractiveUsers(Graph<User, UserRelation> g) {		
 		Graph<User, UserRelation> subG = SubGraphView.of(
 				g,
 				g.vertexSet().stream()

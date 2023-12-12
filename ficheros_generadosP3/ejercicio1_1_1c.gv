@@ -1,4 +1,4 @@
-strict digraph G {
+digraph G {
   1 [ label="Diana" ];
   2 [ color="red" label="Guti" ];
   3 [ color="red" label="David" ];
