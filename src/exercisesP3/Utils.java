@@ -4,6 +4,7 @@ import org.jgrapht.Graph;
 
 import auxTypesP3.Neighbourship;
 import auxTypesP3.Ride;
+import auxTypesP3.TaskRelation;
 import auxTypesP3.User;
 import auxTypesP3.UserRelation;
 import us.lsi.graphs.Graphs2;
@@ -35,5 +36,13 @@ public class Utils {
 		
 	}
 
+	public static Graph<String, TaskRelation> readGraph3(String route) {
+		return GraphsReader.newGraph(
+				route,
+				s -> s[0],
+				TaskRelation::ofFormat,
+				Graphs2::simpleDirectedGraph
+				);
+	}
 
 }

@@ -30,7 +30,6 @@ public class Exercise1 {
 	}
 	
 	public static Set<User> questMinUsers(Graph<User, UserRelation> g) {
-		//Ask for the minimum number of users representing all the relations (min vertices keeping all edges -> Vertex covering, RecursiveExactVCImpl).
 		Graph<User, UserRelation> undirectedG = Graphs.undirectedGraph(g);
 		return new RecursiveExactVCImpl<>(undirectedG).getVertexCover();
 	}

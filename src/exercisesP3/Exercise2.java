@@ -1,33 +1,27 @@
 package exercisesP3;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.jgrapht.Graph;
+import org.jgrapht.Graphs;
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 import org.jgrapht.alg.spanning.KruskalMinimumSpanningTree;
+import org.jgrapht.alg.tour.HeldKarpTSP;
 import org.jgrapht.graph.DefaultWeightedEdge;
+import org.jgrapht.graph.builder.GraphBuilder;
+import org.jgrapht.traverse.DepthFirstIterator;
 
 import auxTypesP3.Neighbourship;
 import auxTypesP3.Ride;
 import us.lsi.graphs.views.SubGraphView;
 
 public class Exercise2 {
-	
-	/*
-	 * 2. Se desea planificar una visita a un parque de atracciones. Se ha modelado dicho parque
-como un grafo no dirigido en el que los vértices son las atracciones y las aristas
-representan la relación de vecindad entre las atracciones. De cada relación de vecindad se
-conoce su distancia (número real en kilómetros) y tiempo medio (número real en minutos)
-que se tarda en recorrerla. De cada atracción se conoce su tiempo de espera medio (entero
-en minutos), su popularidad (número real en el rango [0,10]), y su duración (entero en
-minutos).
-
-				a. Dadas dos atracciones, determine el camino de menor distancia para ir de una a
-		otra. Muestre el grafo configurando su apariencia de forma que se resalte dicho
-		camino.
-		
-		*/ 
 	
 	public static Graph<Ride, Neighbourship> minPath(Graph<Ride, Neighbourship> g, Ride ride1, Ride ride2) {
 		var alg = new DijkstraShortestPath<Ride, Neighbourship>(g).getPath(ride1, ride2);
@@ -43,31 +37,51 @@ minutos).
 		return null;
 	}
 	
-		/*
-		b. Determine el camino de menor tiempo medio que pase por todas las atracciones
-		exactamente una vez y vuelva al origen. Muestre el grafo configurando su
-		apariencia de forma que se resalte dicho camino, mostrando el vértice desde el
-		que se parte en un color distinto al resto.
-		*/
-	
-	public static Graph<Ride, Neighbourship> lessTimeAllRides(Graph<Ride, Neighbourship> g) {
-		var alg = new KruskalMinimumSpanningTree<Ride, Neighbourship>(g);
+	public static List<Ride> lessTimeAllRides(Graph<Ride, Neighbourship> g) {
+		
+		g.edgeSet().stream().forEach(e -> g.setEdgeWeight(e, e.getTime()));
+		List<Ride> alg = new HeldKarpTSP().getTour(g).getVertexList();
+		g.edgeSet().stream().forEach(e -> g.setEdgeWeight(e, e.getDistance()));
+		
+		return alg;
 	}	
 	
 	
-		/*
-		c. Dado un número entero de horas disponibles para la visita, determine un camino
-		formado por una lista de atracciones a visitar de tal manera que se inicie por la
-		atracción más popular (tomándola como punto de partida) y que, a continuación,
-		se dirija a la atracción vecina más popular que aún no haya sido visitada, sin
-		priorizar la proximidad, sino la popularidad. Este proceso debe repetirse,
-		considerando el desplazamiento, el tiempo medio de espera y la duración de cada
-		atracción, hasta que no quede tiempo suficiente para desplazarse, esperar y
-		disfrutar de la siguiente atracción vecina más popular no visitada, o cuando no
-		haya más atracciones vecinas por visitar. Muestre el grafo configurando su
-		apariencia de forma que se resalte dicho camino, mostrando la atracción inicial
-		más popular en un color distinto del resto.
-
-	 */
+	public static Ride getNextRide(Graph<Ride, Neighbourship> g, Ride r, Comparator<Ride> comp, List<Ride> path) {
+		Set<Ride> vSet = new HashSet<>();
+		for(Neighbourship n:g.edgesOf(r)) {
+			vSet.add(getFromName(g, n.getRide1()));
+			vSet.add(getFromName(g, n.getRide2()));
+		}
+		vSet.removeAll(path);
+		return vSet.stream().max(comp).orElse(null);
+	}
+	
+	public static List<Ride> popularWithHours(Graph<Ride, Neighbourship> g, Integer hours) {
+		Integer mins = hours * 60;
+		List<Ride> path = new ArrayList<>();
+		Comparator<Ride> compPopularity = Comparator.comparing(v -> v.getPopularity());
+		Ride r1 = g.vertexSet().stream().max(compPopularity).get();
+		Ride r2 = r1;
+		Double timePassed = 0.0;
+		
+		if(r1.getDuration() + r1.getWaitTime() < mins) {
+			timePassed = (double) (r1.getDuration() + r1.getWaitTime());
+			path.add(r1);
+			r2 = getNextRide(g, r1, compPopularity, path);
+		}
+		while(r2 != null) {
+			Double timeAdd = r2.getDuration() + r2.getWaitTime() + g.getEdge(r1, r2).getTime();
+			if(timePassed + timeAdd < mins) {
+				path.add(r2);
+				timePassed += timeAdd;
+				r1 = r2;
+				r2 = getNextRide(g, r1, compPopularity, path);
+			} else {
+				break;
+			}
+		}
+		return path;
+	}
 
 }

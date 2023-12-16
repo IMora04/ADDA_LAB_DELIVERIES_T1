@@ -1,0 +1,37 @@
+strict graph G {
+  1 [ color="orange" label="Barco Pirata" ];
+  2 [ color="blue" label="Casa del Terror" ];
+  3 [ color="blue" label="Tombola" ];
+  4 [ color="blue" label="Gusano Loco" ];
+  5 [ color="blue" label="Raton Vacilon" ];
+  6 [ color="blue" label="Coches de choque" ];
+  7 [ color="blue" label="Pim pam pum" ];
+  8 [ color="blue" label="Puesto de algodon" ];
+  9 [ color="blue" label="Noria" ];
+  10 [ color="blue" label="Patitos" ];
+  11 [ color="blue" label="Tren de la bruja" ];
+  12 [ color="blue" label="Casa de los espejos" ];
+  1 -- 2 [ label="distance:150.0, time:2.0" ];
+  1 -- 3 [ color="blue" label="distance:100.0, time:1.5" ];
+  1 -- 5 [ label="distance:150.0, time:1.5" ];
+  2 -- 5 [ label="distance:50.0, time:5.0" ];
+  3 -- 4 [ color="blue" label="distance:30.0, time:0.5" ];
+  4 -- 5 [ label="distance:40.0, time:0.8" ];
+  6 -- 2 [ color="blue" label="distance:150.0, time:2.0" ];
+  6 -- 1 [ label="distance:100.0, time:2.0" ];
+  2 -- 4 [ label="distance:50.0, time:3.0" ];
+  1 -- 7 [ label="distance:120.0, time:1.8" ];
+  12 -- 5 [ color="blue" label="distance:20.0, time:5.0" ];
+  2 -- 8 [ color="blue" label="distance:80.0, time:1.2" ];
+  3 -- 9 [ label="distance:90.0, time:1.4" ];
+  11 -- 9 [ color="blue" label="distance:60.0, time:6.0" ];
+  4 -- 10 [ label="distance:60.0, time:1.0" ];
+  5 -- 7 [ color="blue" label="distance:130.0, time:1.9" ];
+  6 -- 9 [ label="distance:110.0, time:2.1" ];
+  7 -- 8 [ color="blue" label="distance:40.0, time:0.7" ];
+  8 -- 9 [ label="distance:50.0, time:0.8" ];
+  9 -- 10 [ color="blue" label="distance:70.0, time:1.1" ];
+  10 -- 1 [ color="blue" label="distance:150.0, time:2.0" ];
+  6 -- 11 [ color="blue" label="distance:70.0, time:4.5" ];
+  4 -- 12 [ color="blue" label="distance:20.0, time:2.5" ];
+}
