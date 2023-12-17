@@ -36,7 +36,7 @@ public class Exercise1Test {
 				v -> GraphColors.colorIf(Color.red, subG.vertexSet().contains(v)),
 				e -> GraphColors.colorIf(Color.blue, subG.vertexSet().contains(g.getEdgeSource(e)))
 				);
-		System.out.println("File " + route + " has been generated");
+		System.out.println("The file ficheros_generadosP3/" + route + ".gv has been generated");
 		System.out.println("Users that follow 3 users, and whose average interaction index with" +
 				"users he follows is greater than 2.5 are:");
 		subG.vertexSet().forEach(t -> System.out.print(t.userName() + ", "));
@@ -67,7 +67,7 @@ public class Exercise1Test {
 				e -> getColor(g.getEdgeSource(e), groups)
 				);
 		
-		System.out.println("File " + route + " has been generated");
+		System.out.println("The file ficheros_generadosP3/" + route + ".gv has been generated");
 		System.out.println("The graph has " + groups.size() + " groups.\n");
 		
 	}
@@ -82,7 +82,7 @@ public class Exercise1Test {
 				v -> GraphColors.colorIf(Color.red, subG.contains(v)),
 				e -> GraphColors.color(Color.black)
 				);
-		System.out.println("File " + route + " has been generated");
+		System.out.println("The file ficheros_generadosP3/" + route + ".gv has been generated");
 		System.out.println("Users to which the questionnaire has to be sent are:");
 		subG.forEach(t -> System.out.print(t.userName() + ", "));
 		System.out.println("\n");
@@ -98,7 +98,7 @@ public class Exercise1Test {
 				v -> GraphColors.colorIf(Color.red, subG.vertexSet().contains(v)),
 				e -> GraphColors.color(Color.black)
 				);
-		System.out.println("File " + route + " has been generated");
+		System.out.println("The file ficheros_generadosP3/" + route + ".gv has been generated");
 		System.out.println("The 2 users with the most average interaction among their followers, that have at least 5 followers, 4 hobbies and an activity"
 				+ " higher than 4 are:");
 		subG.vertexSet().forEach(t -> System.out.print(t.userName() + ", "));
@@ -114,6 +114,7 @@ public class Exercise1Test {
 		}
 	
 		for(String s:routes1) {
+			System.out.println("----- TESTS FOR FILE " + s + ".txt -----\n");
 			Graph<User, UserRelation> g1 = Utils.readGraph1("filesP3/" + s + ".txt");
 			testE1a(g1, s + "_1a");
 			testE1b(g1, s + "_1b");
