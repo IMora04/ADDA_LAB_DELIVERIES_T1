@@ -17,13 +17,13 @@ public class Exercise1 {
 	
 	public static Graph<User, UserRelation> viewMoreThan3(Graph<User, UserRelation> g) {
 		Graph<User, UserRelation> subG = SubGraphView.of(g,
-				g.vertexSet().stream()
+				ve -> g.vertexSet().stream()
 				.filter(v -> g.outgoingEdgesOf(v).size() > 3 && 
 						g.outgoingEdgesOf(v).stream().mapToDouble(x->x.interactionIndex()).average().getAsDouble() > 2.5)
-				.collect(Collectors.toSet()));
+				.collect(Collectors.toSet()).contains(ve));
 		return subG;
 	}
-		
+	
 	public static ConnectivityInspector<User, UserRelation> userGroups(Graph<User, UserRelation> g) {
 		var alg = new ConnectivityInspector<>(g);
 		return alg;
@@ -37,7 +37,7 @@ public class Exercise1 {
 	public static Graph<User, UserRelation> mostInteractiveUsers(Graph<User, UserRelation> g) {		
 		Graph<User, UserRelation> subG = SubGraphView.of(
 				g,
-				g.vertexSet().stream()
+				ve -> g.vertexSet().stream()
 					.filter(v -> g.incomingEdgesOf(v).size() >= 5 && 
 						v.hobbies().size() > 3 &&
 						v.activityIndex() > 4)
@@ -48,11 +48,11 @@ public class Exercise1 {
 							.average().getAsDouble(),
 						Comparator.reverseOrder()))
 					.limit(2)
-					.collect(Collectors.toSet())
+					.collect(Collectors.toSet()).contains(ve)
 				);
 		
 		return subG;
-
+ 
 	}
 
 }

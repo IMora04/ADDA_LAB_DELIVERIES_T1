@@ -25,7 +25,7 @@ public class Exercise2 {
 	
 	public static Graph<Ride, Neighbourship> minPath(Graph<Ride, Neighbourship> g, Ride ride1, Ride ride2) {
 		var alg = new DijkstraShortestPath<Ride, Neighbourship>(g).getPath(ride1, ride2);
-		return SubGraphView.of(g, alg.getVertexList().stream().collect(Collectors.toSet()));
+		return SubGraphView.of(g, ve -> alg.getVertexList().stream().collect(Collectors.toSet()).contains(ve));
 	}
 	
 	public static Ride getFromName(Graph<Ride, Neighbourship> g, String name) {
